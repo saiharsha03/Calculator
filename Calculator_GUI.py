@@ -7,8 +7,15 @@ from div import div
 from mod import modulo
 
 def calculate(operation):
-    firstnumber = float(First_number.get())
-    secondnumber = float(Second_number.get())
+    try:
+        firstnumber = float(First_number.get())
+        secondnumber = float(Second_number.get())
+    except ValueError:
+        result_label.config(text="Please enter two valid numbers")
+        return
+    if operation in ("div", "mod") and secondnumber == 0:
+        result_label.config(text="Cannot divide by zero")
+        return
     result = ""
     y = ""
     if operation == "add":

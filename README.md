@@ -17,6 +17,6 @@ python Calculator_GUI.py
 
 Tkinter ships with Python, so there is nothing to install.
 
-## Known limits
+## Input handling
 
-Inputs are read as floats, and there is no error handling. Dividing by zero, or entering something that is not a number, raises an exception in the console instead of showing a message.
+Inputs are read as floats. Entering something that is not a number shows "Please enter two valid numbers", and dividing or taking a modulo by zero shows "Cannot divide by zero".
